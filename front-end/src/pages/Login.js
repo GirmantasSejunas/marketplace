@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 const Login = () => {
+
+  const mailRef = useRef()
+  const passwordRef = useRef()
+
+  function submit() {
+    const user = {
+      mail:mailRef.current.value,
+      password:passwordRef.current.value
+    }
+    console.log(user)
+
+    mailRef.current.value = ''  
+    passwordRef.current.value = ''
+  }
   return (
     <div className='login'>
       <h2>Prisijungimas</h2>
 
-      <input className='p_5' type={'text'} placeholder="El.pastas" />
-      <input className='p_5' type={'text'} placeholder="Slaptazodis" />
+      <input ref={mailRef} className='p_5' type={'text'} placeholder="El.pastas" />
+      <input ref={passwordRef} className='p_5' type={'text'} placeholder="Slaptazodis" />
 
-      <button className='p_5'>Prisijungti</button>
+      <button onClick={submit} className='p_5'>Prisijungti</button>
     </div>
   )
 }
