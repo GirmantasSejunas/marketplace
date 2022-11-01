@@ -1,11 +1,12 @@
 import React, { useRef } from 'react'
+import { post } from '../plugins/plugin'
 
 const Login = () => {
 
   const mailRef = useRef()
   const passwordRef = useRef()
 
-  function submit() {
+  async function submit() {
     const user = {
       mail:mailRef.current.value,
       password:passwordRef.current.value
@@ -14,7 +15,11 @@ const Login = () => {
 
     mailRef.current.value = ''  
     passwordRef.current.value = ''
+    
+    const userData = await post('login', user)
+    console.log(userData)
   }
+
   return (
     <div className='login'>
       <h2>Prisijungimas</h2>
