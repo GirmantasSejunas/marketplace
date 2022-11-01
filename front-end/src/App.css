@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.p_5 {
+  padding: 5px;
+}
+
+.app {
+  background: rgb(226, 187, 196);
+  background: linear-gradient(90deg, rgba(226, 187, 196, 1) 33%, rgba(109, 231, 240, 1) 95%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.header {
+  height: 80px;
+  width: 66%;
+  align-items: center;
+  padding: 0 15px;
+  margin-left: 35px;
+  margin-right: 35px;
+  box-shadow: 0px 15px 10px -15px rgb(0, 0, 0);
+
+}
+
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.header_botton select {
+  width: 25%;
+}
+
+.header_botton input {
+  width: 50%;
+}
+
+.header_botton button {
+  width: 25%;
+  background-color: rgb(45, 247, 45);
+}
+
+.header_botton button:hover {
+  background-color: rgb(44, 203, 44);
+}
+
+.header_left button {
+  margin-right: 15px;
+}
+
+.header_right a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.header_right a:hover {
+  color: red;
+  font-size: larger;
+}
+
+
+
+.main {
+  min-height: calc(100vh - 130px);
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+
+.slider a {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.title:hover {
+  color: red;
+}
+
+
+.footer {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  display: flex;
+}
+
+.footer li {
+  margin-right: 15px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgb(37, 35, 35);
+}
+
+.footer a:hover {
+  color: red;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.login h2 {
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.login input {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.register h2 {
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.register input {
+  margin-bottom: 5px;
+  text-align: center;
+}
