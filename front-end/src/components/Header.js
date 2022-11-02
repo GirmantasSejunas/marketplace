@@ -9,12 +9,13 @@ const Header = () => {
       <a href='/'><h1 className='title'>Nemokamu skelbimu portalas</h1></a>
     <div className='header'>
       <div className='header_top'>
-        <div className='header_left'>
-          <button className='p_5'>Ideti skelbima</button>
-          <button className='p_5'>Redaguoti</button>
+
+        <div className='header_links'>
+          <a className='p_5' href='/addform'>Ideti skelbima</a>
+          <a className='p_5' href='/editform'>Redaguoti</a>
         </div>
 
-        <div className='header_right'>
+        <div className='header_links'>
           <a className='p_5' href='/login'>Prisijungti</a>
           <a className='p_5' href='/register'>Registruotis</a>
         </div>
@@ -29,7 +30,7 @@ const Header = () => {
           <option>Drabuziai</option>
         </select>
         <input className='p_5' type={'text'} placeholder='Iveskite paieskos fraze' />
-        <button className='p_5'>Ieskoti</button>
+        <button className='p_5 button_green w25'>Ieskoti</button>
       </div>
     </div>
        

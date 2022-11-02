@@ -21,14 +21,14 @@ const Register = () => {
   }
 
   return (
-    <div className='register'>
+    <div className='formLayout'>
 
       <h2>Registracija</h2>
       <input ref={mailRef} className='p_5' type={'text'} placeholder="El.pastas" />
       <input ref={passwordRef} className='p_5' type={'text'} placeholder="Slaptazodis" />
       <input ref={password2Ref} className='p_5' type={'text'} placeholder="Pakartoti slaptazodis" />
 
-      <button onClick={submit} className='p_5'>Registruotis</button>
+      <button onClick={submit} className='p_5 button_green'>Registruotis</button>
     </div>
   )
 }

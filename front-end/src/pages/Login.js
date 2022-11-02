@@ -21,13 +21,13 @@ const Login = () => {
   }
 
   return (
-    <div className='login'>
+    <div className='formLayout'>
       <h2>Prisijungimas</h2>
 
       <input ref={emailRef} className='p_5' type={'text'} placeholder="El.pastas" />
       <input ref={passwordRef} className='p_5' type={'text'} placeholder="Slaptazodis" />
 
-      <button onClick={submit} className='p_5'>Prisijungti</button>
+      <button onClick={submit} className='p_5 button_green'>Prisijungti</button>
     </div>
   )
 }
