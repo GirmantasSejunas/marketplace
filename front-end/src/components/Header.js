@@ -24,7 +24,7 @@ const Header = () => {
         <select className='p_5'>
           <option>Visos kategorijos</option>
           <option>Nekilnojamas turtas</option>
-          <option>Automobiliai</option>
+          <option>Transportas</option>
           <option>Technika</option>
           <option>Drabuziai</option>
         </select>
