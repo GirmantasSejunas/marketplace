@@ -13,12 +13,11 @@ const Header = () => {
         <div className='header_links'>
           <a className='p_5' href='/addform'>Ideti skelbima</a>
           <a className='p_5' href='/editform'>Redaguoti</a>
-        </div>
-
-        <div className='header_links'>
           <a className='p_5' href='/login'>Prisijungti</a>
           <a className='p_5' href='/register'>Registruotis</a>
         </div>
+
+        
 
       </div>
       <div className='header_botton'>
@@ -26,8 +25,8 @@ const Header = () => {
           <option>Visos kategorijos</option>
           <option>Nekilnojamas turtas</option>
           <option>Transportas</option>
-          <option>Technika</option>
-          <option>Drabuziai</option>
+          <option>Prietaisai</option>
+          <option>Apranga</option>
         </select>
         <input className='p_5' type={'text'} placeholder='Iveskite paieskos fraze' />
         <button className='p_5 button_green w25'>Ieskoti</button>
