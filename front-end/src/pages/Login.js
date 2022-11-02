@@ -17,7 +17,9 @@ const Login = () => {
     passwordRef.current.value = ''
     
     const userData = await post('login', user)
+
     console.log(userData)
+
   }
 
   return (

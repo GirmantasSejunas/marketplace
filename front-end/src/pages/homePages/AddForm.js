@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { post } from '../../plugins/plugin'
 
 const AddForm = () => {
 
@@ -10,7 +11,7 @@ const AddForm = () => {
     const priceRef = useRef()
     const phoneRef = useRef()
 
-    function submit() {
+   async function submit() {
         const form = {
             photo: photoRef.current.value,
             title: titleRef.current.value,
@@ -27,6 +28,10 @@ const AddForm = () => {
         cityRef.current.value = ''
         priceRef.current.value = ''
         phoneRef.current.value = ''
+
+        const formData = await post('addForm', form)
+
+        console.log(formData)
     }
 
     return (

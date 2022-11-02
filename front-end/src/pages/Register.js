@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-
+import { post } from '../plugins/plugin'
 
 const Register = () => {
 
@@ -7,7 +7,7 @@ const Register = () => {
   const passwordRef = useRef()
   const password2Ref = useRef()
 
-  function submit() {
+ async function submit() {
     const user = {
       mail:mailRef.current.value,
       password:passwordRef.current.value,
@@ -18,6 +18,10 @@ const Register = () => {
     mailRef.current.value = ''  
     passwordRef.current.value = ''
     password2Ref.current.value = ''
+
+
+    const registerData = await post("register", user)
+     console.log(registerData)
   }
 
   return (
