@@ -10,28 +10,30 @@ const AddForm = () => {
     const cityRef = useRef()
     const priceRef = useRef()
     const phoneRef = useRef()
+    const optionRef = useRef()
 
-   async function submit() {
+    async function submit() {
         const form = {
             photo: photoRef.current.value,
             title: titleRef.current.value,
             description: descriptionRef.current.value,
             city: cityRef.current.value,
             price: priceRef.current.value,
-            phone: phoneRef.current.value
+            phone: phoneRef.current.value,
+            option: optionRef.current.value
         }
         console.log(form)
 
-        photoRef.current.value = ''
-        titleRef.current.value = ''
-        descriptionRef.current.value = ''
-        cityRef.current.value = ''
-        priceRef.current.value = ''
-        phoneRef.current.value = ''
+        // photoRef.current.value = ''
+        // titleRef.current.value = ''
+        // descriptionRef.current.value = ''
+        // cityRef.current.value = ''
+        // priceRef.current.value = ''
+        // phoneRef.current.value = ''
 
-        const formData = await post('addForm', form)
+        const postData = await post('addPost', form)
 
-        console.log(formData)
+        console.log(postData)
     }
 
     return (
@@ -44,7 +46,14 @@ const AddForm = () => {
             <input ref={cityRef} className='p_5' type={'text'} placeholder="Miestas" />
             <input ref={priceRef} className='p_5' type={'text'} placeholder="Kaina" />
             <input ref={phoneRef} className='p_5' type={'text'} placeholder="Tel.nr" />
-            
+            <select ref={optionRef} className='p_5'>
+                <option disabled selected>Pasirinkite kategorija</option>
+                <option>Nekilnojamas turtas</option>
+                <option>Transportas</option>
+                <option>Prietaisai</option>
+                <option>Apranga</option>
+            </select>
+
 
             <button onClick={submit} className='p_5 button_green'>Ideti skelbima</button>
         </div>

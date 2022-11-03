@@ -172,6 +172,11 @@
   text-align: center;
 }
 
+.formLayout select {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
 .about h2 {
   display: flex;
   justify-content: center;
