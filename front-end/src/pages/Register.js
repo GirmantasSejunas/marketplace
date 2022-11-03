@@ -15,9 +15,9 @@ const Register = () => {
     }
     console.log(user)
 
-    mailRef.current.value = ''  
-    passwordRef.current.value = ''
-    password2Ref.current.value = ''
+    // mailRef.current.value = ''  
+    // passwordRef.current.value = ''
+    // password2Ref.current.value = ''
 
 
     const registerData = await post("register", user)
