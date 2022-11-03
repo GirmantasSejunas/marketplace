@@ -8,6 +8,10 @@
   padding: 5px;
 }
 
+.w25 {
+  width: 25%;
+}
+
 .app {
   background: rgb(226, 187, 196);
   background: linear-gradient(90deg, rgba(226, 187, 196, 1) 33%, rgba(109, 231, 240, 1) 95%);
@@ -54,9 +58,7 @@
   background-color: rgb(44, 203, 44);
 }
 
-.w25 {
-  width: 25%;
-}
+
 
 .header_links {
   width: 100%;
@@ -278,6 +280,7 @@
   text-align: center;
   text-decoration: none;
 }
+
 .singleCardWraper img {
   width: 100%;
   margin-bottom: 25px;
