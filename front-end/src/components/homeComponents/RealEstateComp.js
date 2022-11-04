@@ -3,7 +3,11 @@ import SingleCard from './SingleCard'
 
 const RealEstateComp = () => {
     return (
+
+        <div>
+
         <SingleCard />
+        </div>
     )
 
 }

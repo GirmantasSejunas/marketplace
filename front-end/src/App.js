@@ -18,6 +18,7 @@ import Transport from './pages/homePages/Transport'
 import Clothes from './pages/homePages/Clothes';
 import RealEstate from './pages/homePages/RealEstate';
 import AddForm from './pages/homePages/AddForm';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
             <Route path='/clothes' element={<Clothes />} />
             <Route path='/realEstate' element={<RealEstate />} />
             <Route path='/addform' element={<AddForm />} />
+            <Route path='/userProfile' element={<ProfilePage />} />
           </Routes>
           <Footer />
         </BrowserRouter>

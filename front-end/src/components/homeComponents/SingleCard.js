@@ -11,7 +11,8 @@ const SingleCard = () => {
                 <h2>parduodu mazai naudota nokia</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas autem tempore earum delectus! Animi laudantium molestiae cupiditate, quasi a enim autem, sapiente excepturi esse vel molestias ipsum corporis quisquam provident.</p>
                 <div className='singleCardSpans'>
-                    <span>kaunas</span>
+                    <span>Kaunas</span>
+                    <span>Tel.nr: 8666 000 00</span>
                     <span>kaina: 15e</span>
                 </div>
             </div>

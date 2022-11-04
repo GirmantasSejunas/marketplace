@@ -3,7 +3,7 @@ import SingleCard from './SingleCard'
 
 const TransportComp = () => {
     return (
-        <div className='singleCardWraper'>
+        <div>
             <SingleCard />
 
         </div>

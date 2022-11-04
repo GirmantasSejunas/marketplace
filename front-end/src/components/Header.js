@@ -12,9 +12,9 @@ const Header = () => {
 
         <div className='header_links'>
           <a className='p_5' href='/addform'>Ideti skelbima</a>
-          <a className='p_5' href='/editform'>Redaguoti</a>
           <a className='p_5' href='/login'>Prisijungti</a>
           <a className='p_5' href='/register'>Registruotis</a>
+          <a className='p_5' href='/userProfile'>Jusu profilis</a>
         </div>
 
         

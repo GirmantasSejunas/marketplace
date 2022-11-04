@@ -21,7 +21,6 @@ const Login = () => {
     
     const userData = await post('login', user)
 
-    console.log(userData)
 
     if(!userData.error){
 

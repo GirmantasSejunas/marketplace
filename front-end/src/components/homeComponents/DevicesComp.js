@@ -3,7 +3,10 @@ import SingleCard from './SingleCard'
 
 const DevicesComp = () => {
   return (
-    <SingleCard />
+    <div>
+      <SingleCard />
+
+    </div>
   )
 }
 

@@ -250,10 +250,10 @@
 
 .home {
   display: flex;
-    justify-content: space-evenly;
-    height: inherit;
-    margin-top: 50px;
-    align-items: center;
+  justify-content: space-evenly;
+  height: inherit;
+  margin-top: 50px;
+  align-items: center;
 }
 
 .mb25-mt35 {
@@ -264,6 +264,15 @@
 .singleCard {
   width: 100%;
   margin-bottom: 30px;
+  display: flex;
+}
+
+.singleCardMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 50px;
 }
 
 .singleCardMain h2 {
@@ -271,9 +280,11 @@
 }
 
 .singleCardSpans {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
   margin-top: 20px;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .singleCardWraper {
@@ -295,4 +306,11 @@
 .devices {
   display: flex;
   flex-wrap: wrap;
+}
+
+.userProfileInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
 }
