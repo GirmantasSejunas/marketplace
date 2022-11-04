@@ -1,16 +1,11 @@
 import React from 'react'
-import SingleCard from '../../components/homeComponents/SingleCard'
+import DevicesComp from '../../components/homeComponents/DevicesComp'
 
 const Devices = () => {
   return (
-    <div className='devices'>
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
+    <div>
+        < DevicesComp />
+       
     </div>
   )
 }

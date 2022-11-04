@@ -1,8 +1,11 @@
 import React from 'react'
+import ClothesComp from '../../components/homeComponents/ClothesComp'
 
 const Clothes = () => {
   return (
-    <div>Clothes</div>
+    <div>
+      <ClothesComp />
+      </div>
   )
 }
 

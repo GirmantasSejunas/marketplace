@@ -1,8 +1,8 @@
 import React from 'react'
-import Clothes from '../components/homeComponents/Clothes'
-import Devices from '../components/homeComponents/Devices'
-import RealEstate from '../components/homeComponents/RealEstate'
-import Transport from '../components/homeComponents/Transport'
+import Clothes from '../pages/homePages/Clothes'
+import Devices from '../pages/homePages/Devices'
+import RealEstate from '../pages/homePages/RealEstate'
+import Transport from '../pages/homePages/Transport'
 
 const Home = () => {
   return (

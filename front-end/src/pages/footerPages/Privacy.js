@@ -1,5 +1,5 @@
 import React from 'react'
-import PrivacyComp from '../components/footerComponents/PrivacyComp'
+import PrivacyComp from '../../components/footerComponents/PrivacyComp'
 
 const Privacy = () => {
   return (

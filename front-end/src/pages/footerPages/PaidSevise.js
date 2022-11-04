@@ -1,5 +1,5 @@
 import React from 'react'
-import PaidServiceComp from '../components/footerComponents/PaidServiceComp'
+import PaidServiceComp from '../../components/footerComponents/PaidServiceComp'
 
 const PaidSevise = () => {
   return (

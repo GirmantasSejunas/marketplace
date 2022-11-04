@@ -1,8 +1,13 @@
 import React from 'react'
+import RealEstateComp from '../../components/homeComponents/RealEstateComp'
+
+
 
 const RealEstate = () => {
   return (
-    <div>RealEstate</div>
+    <div>
+     < RealEstateComp />
+      </div>
   )
 }
 

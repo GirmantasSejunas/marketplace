@@ -1,8 +1,12 @@
 import React from 'react'
+import TransportComp from '../../components/homeComponents/TransportComp'
+
 
 const Transport = () => {
   return (
-    <div>Transport</div>
+    <div>
+      <TransportComp />
+    </div>
   )
 }
 

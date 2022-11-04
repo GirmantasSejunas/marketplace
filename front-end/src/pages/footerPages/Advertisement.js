@@ -1,5 +1,5 @@
 import React from 'react'
-import AdvertisementComp from '../components/footerComponents/AdvertisementComp'
+import AdvertisementComp from '../../components/footerComponents/AdvertisementComp'
 
 const Advertisement = () => {
   return (

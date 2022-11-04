@@ -1,5 +1,5 @@
 import React from 'react'
-import RulesComp from '../components/footerComponents/RulesComp'
+import RulesComp from '../../components/footerComponents/RulesComp'
 
 const Rules = () => {
   return (

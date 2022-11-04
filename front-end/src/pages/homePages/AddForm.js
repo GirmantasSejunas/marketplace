@@ -47,7 +47,6 @@ const AddForm = () => {
             <input ref={priceRef} className='p_5' type={'text'} placeholder="Kaina" />
             <input ref={phoneRef} className='p_5' type={'text'} placeholder="Tel.nr" />
             <select ref={optionRef} className='p_5'>
-                <option disabled selected>Pasirinkite kategorija</option>
                 <option>Nekilnojamas turtas</option>
                 <option>Transportas</option>
                 <option>Prietaisai</option>

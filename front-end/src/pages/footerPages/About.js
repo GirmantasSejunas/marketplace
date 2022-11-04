@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutComp from '../components/footerComponents/About'
+import AboutComp from '../../components/footerComponents/About'
 
 const About = () => {
   return (
