@@ -1,7 +1,10 @@
 import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { post } from '../plugins/plugin'
 
 const Login = () => {
+
+  const nav = useNavigate()
 
   const emailRef = useRef()
   const passwordRef = useRef()
@@ -19,6 +22,13 @@ const Login = () => {
     const userData = await post('login', user)
 
     console.log(userData)
+
+    if(!userData.error){
+
+     return  nav('./userProfile')
+
+    }
+
 
   }
 
