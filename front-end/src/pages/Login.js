@@ -21,11 +21,14 @@ const Login = () => {
     
     const userData = await post('login', user)
 
-
+    
     if(!userData.error){
 
-     return  nav('./userProfile')
+      console.log(userData.message)
 
+      localStorage.setItem('secret', userData.data.secret)
+      return  nav('/userProfile')
+      
     }
 
 

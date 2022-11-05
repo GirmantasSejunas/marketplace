@@ -31,7 +31,7 @@ module.exports = {
         if (user) {
             const compare = await bcrypt.compare(password, user.hashedPassword)
             if (compare) {
-                return sendRes(res, false, 'sekmingai prisiregistravote', { secret: user.secret })
+                return sendRes(res, false, 'sekmingai prisijungete', { secret: user.secret })
             }
         }
 
@@ -56,7 +56,11 @@ module.exports = {
 
         await newPost.save()
         return sendRes(res, false, "skelbimas ikeltas", null)
+    },
+    userInfo: async (req, res) => {
+        const {user} = req.body
 
+        return sendRes(res, false, "all good", user)
     }
 
 }

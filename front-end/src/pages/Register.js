@@ -1,7 +1,10 @@
 import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { post } from '../plugins/plugin'
 
 const Register = () => {
+
+  const nav = useNavigate()
 
   const mailRef = useRef()
   const passwordRef = useRef()
@@ -21,7 +24,14 @@ const Register = () => {
 
 
     const registerData = await post("register", user)
-     console.log(registerData)
+    
+    // if(!registerData.error){
+    //   localStorage.setItem('secret', registerData.data.secret)
+      console.log(registerData)
+      
+    // }
+    nav('/userProfile')
+    
   }
 
   return (
