@@ -10,28 +10,21 @@ const Register = () => {
   const passwordRef = useRef()
   const password2Ref = useRef()
 
- async function submit() {
+  async function submit() {
     const user = {
-      mail:mailRef.current.value,
-      password:passwordRef.current.value,
-      password2:password2Ref.current.value
+      mail: mailRef.current.value,
+      password: passwordRef.current.value,
+      password2: password2Ref.current.value
     }
-    console.log(user)
-
-    // mailRef.current.value = ''  
-    // passwordRef.current.value = ''
-    // password2Ref.current.value = ''
-
 
     const registerData = await post("register", user)
-    
-    // if(!registerData.error){
-    //   localStorage.setItem('secret', registerData.data.secret)
-      console.log(registerData)
-      
-    // }
-    nav('/userProfile')
-    
+
+
+    if (!registerData.error) {
+
+      nav('/login')
+    }
+
   }
 
   return (

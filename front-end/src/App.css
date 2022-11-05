@@ -273,6 +273,7 @@
   justify-content: space-around;
   align-items: flex-start;
   margin-left: 50px;
+  width: inherit;
 }
 
 .singleCardMain h2 {

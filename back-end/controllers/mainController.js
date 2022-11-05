@@ -40,10 +40,10 @@ module.exports = {
     },
     addPost: async (req, res) => {
 
+    
         const { photo, title, description, city, price, phone, option } = req.body
 
-        
-
+    
         const newPost = new postSchema({
             photo, 
             title, 
@@ -55,12 +55,28 @@ module.exports = {
         })
 
         await newPost.save()
-        return sendRes(res, false, "skelbimas ikeltas", null)
+        return sendRes(res, false, "skelbimas ikeltas", newPost)
     },
     userInfo: async (req, res) => {
         const {user} = req.body
 
         return sendRes(res, false, "all good", user)
+    },
+    clothes: async (req, res) =>{
+        const clothesPosts = await postSchema.find({option:'Apranga'})
+        return sendRes(res, false, 'all good', clothesPosts)
+    },
+    devices: async (req, res) =>{
+        const devicesPosts = await postSchema.find({option:'Prietaisai'})
+        return sendRes(res, false, 'all good', devicesPosts)
+    },
+    realEstate: async (req, res) =>{
+        const realEstatePosts = await postSchema.find({option:'Nekilnojamas turtas'})
+        return sendRes(res, false, 'all good', realEstatePosts)
+    },
+    transport: async (req, res) =>{
+        const transportPosts = await postSchema.find({option:'Transportas'})
+        return sendRes(res, false, 'all good', transportPosts)
     }
 
 }

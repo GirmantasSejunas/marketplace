@@ -1,14 +1,33 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import MainContext from '../../context/MainContext'
+import { post } from '../../plugins/plugin'
 import SingleCard from './SingleCard'
 
 const RealEstateComp = () => {
+    const {posts, setPosts} = useContext(MainContext)
+
+
+    useEffect(() => {
+
+    const option = {option:'Nekilnojamas turtas'}
+    
+    post('realEstate', option).then(res => {
+        console.log(res.data)
+        setPosts(res.data)
+    })
+
+
+
+
+    }, [setPosts])
     return (
-
         <div>
-
-        <SingleCard />
+            {posts.map((e, i) => <SingleCard post={e} key={i} /> ).reverse()}
+            
         </div>
+        
     )
+
 
 }
 

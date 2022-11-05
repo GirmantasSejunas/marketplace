@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import MainContext from '../context/MainContext'
 import { get } from '../plugins/plugin'
-import SingleCard from './homeComponents/SingleCard'
 
 const UserProfile = () => {
 
@@ -28,12 +27,12 @@ const UserProfile = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-    const logout = () => {
-      localStorage.removeItem('secret')
+  const logout = () => {
+    localStorage.removeItem('secret')
 
-      return nav('/')
-    }
-  
+    return nav('/')
+  }
+
   return (
 
     <div>
@@ -45,10 +44,6 @@ const UserProfile = () => {
             <button onClick={logout}>
               atsijungti</button>
           </div>
-
-          <SingleCard />
-          <SingleCard />
-          <SingleCard />
         </div>
       }
     </div>

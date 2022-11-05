@@ -1,8 +1,11 @@
 import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { post } from '../../plugins/plugin'
 
 const AddForm = () => {
 
+
+    const nav = useNavigate()
 
     const photoRef = useRef()
     const titleRef = useRef()
@@ -22,7 +25,6 @@ const AddForm = () => {
             phone: phoneRef.current.value,
             option: optionRef.current.value
         }
-        console.log(form)
 
         // photoRef.current.value = ''
         // titleRef.current.value = ''
@@ -31,14 +33,15 @@ const AddForm = () => {
         // priceRef.current.value = ''
         // phoneRef.current.value = ''
 
-        const postData = await post('addPost', form)
+        post('addPost', form).then(res =>{
+            if(!res.error) return nav('/')
+        })
 
-        console.log(postData)
     }
+
 
     return (
         <div className='formLayout'>
-
             <h2>Ideti skelbima</h2>
             <input ref={photoRef} className='p_5' type={'text'} placeholder="Nuotrauka" />
             <input ref={titleRef} className='p_5' type={'text'} placeholder="Pavadinimas" />
