@@ -13,7 +13,6 @@ module.exports = {
 
         const hashedPassword = await bcrypt.hash(password, 10)
 
-        console.log(hashedPassword)
 
         const newUser = new userSchema({ mail, hashedPassword, secret: uid() })
 
@@ -41,7 +40,7 @@ module.exports = {
     addPost: async (req, res) => {
 
     
-        const { photo, title, description, city, price, phone, option } = req.body
+        const { photo, title, description, city, price, phone, option, secret } = req.body
 
     
         const newPost = new postSchema({
@@ -51,7 +50,8 @@ module.exports = {
             city, 
             price, 
             phone, 
-            option
+            option,
+            secret
         })
 
         await newPost.save()
@@ -77,6 +77,12 @@ module.exports = {
     transport: async (req, res) =>{
         const transportPosts = await postSchema.find({option:'Transportas'})
         return sendRes(res, false, 'all good', transportPosts)
+    },
+    userPosts: async (req, res) =>{
+        const { secret} = req.params
+        
+        const userPosts = await postSchema.find({secret: secret})
+        return sendRes(res, false, 'all good', userPosts)
     }
 
 }

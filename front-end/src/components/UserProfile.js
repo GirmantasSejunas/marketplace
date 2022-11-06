@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import MainContext from '../context/MainContext'
 import { get } from '../plugins/plugin'
+import UserPosts from './UserPosts'
 
 const UserProfile = () => {
 
@@ -18,7 +19,7 @@ const UserProfile = () => {
         setUser(data.data)
       }
 
-      console.log(data.data)
+      console.log(data)
     })
   }
 
@@ -41,9 +42,9 @@ const UserProfile = () => {
 
           <div className='userProfileInfo'>
             <h2>Sveiki : {user.mail} </h2>
-            <button onClick={logout}>
-              atsijungti</button>
+            <button onClick={logout}>atsijungti</button>
           </div>
+          <UserPosts user={user} />
         </div>
       }
     </div>

@@ -29,6 +29,9 @@ const postSchema = new Schema({
     option: {
         type: String,
         required: true
+    }, secret: {
+        type: String,
+        required: false
     }
 })
 

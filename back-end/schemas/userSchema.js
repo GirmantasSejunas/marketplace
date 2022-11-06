@@ -11,7 +11,7 @@ const userSchema = new Schema({
         required: true
     },
     secret: {
-        type: String,
+        type: String, 
         required: true
     }
 })

@@ -15,6 +15,7 @@ const AddForm = () => {
     const phoneRef = useRef()
     const optionRef = useRef()
 
+
     async function submit() {
         const form = {
             photo: photoRef.current.value,
@@ -23,7 +24,8 @@ const AddForm = () => {
             city: cityRef.current.value,
             price: priceRef.current.value,
             phone: phoneRef.current.value,
-            option: optionRef.current.value
+            option: optionRef.current.value,
+            secret: localStorage.getItem('secret')
         }
 
         // photoRef.current.value = ''

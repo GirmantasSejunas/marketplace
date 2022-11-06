@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const { registerValidation, secretValidate } = require("../midlewere/midlewere")
 
-const { login, register, addPost, userInfo, clothes, devices, realEstate, transport } = require("../controllers/mainController")
+const { login, register, addPost, userInfo, clothes, devices, realEstate, transport, userPosts } = require("../controllers/mainController")
 
 
 router.post("/login", login)
@@ -13,5 +13,6 @@ router.post('/clothes', clothes)
 router.post('/devices', devices)
 router.post('/realEstate', realEstate)
 router.post('/transport', transport)
+router.get('/userposts/:secret', secretValidate, userPosts)
 
 module.exports = router
