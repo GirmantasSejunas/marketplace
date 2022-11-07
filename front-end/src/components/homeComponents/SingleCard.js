@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import MainContext from '../../context/MainContext'
 
 const SingleCard = (post) => {
+
+    const { user } = useContext(MainContext)
+    
     return (
         <div className='singleCard'>
 
@@ -14,6 +18,10 @@ const SingleCard = (post) => {
                     <span>{post.post.city}</span>
                     <span>Tel.nr: {post.post.phone}</span>
                     <span>Kaina: {post.post.price} e</span>
+                    {user &&
+                        <span>Posto redagavimo kodas:<b>{post.post._id}</b>  </span>
+
+                    }
                 </div>
             </div>
         </div>

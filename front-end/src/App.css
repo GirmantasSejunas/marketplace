@@ -354,3 +354,13 @@
 .userProfileInfo button:hover{
   padding: 10px;
 }
+
+.userProfileSpan{
+  display: flex;
+  justify-content: center;
+  font-size: xxx-large;
+}
+.display_none{
+  display: none;
+}
+

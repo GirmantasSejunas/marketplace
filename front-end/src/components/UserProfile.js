@@ -20,7 +20,6 @@ const UserProfile = () => {
       }
     })
   }
-
   useEffect(() => {
     logged()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -35,8 +34,8 @@ const UserProfile = () => {
   return (
 
     <div>
-      estate neprisijunges
-      {user  &&
+      <span className={user ? 'display_none' : 'userProfileSpan '}>Esate neprisijunges</span>
+      {user &&
         <div className='userProfile'>
 
           <div className='userProfileInfo'>
@@ -44,6 +43,7 @@ const UserProfile = () => {
             <button className='bg_red p_5 w20' onClick={logout}>atsijungti</button>
           </div>
           <UserPosts user={user} />
+
         </div>
       }
     </div>
