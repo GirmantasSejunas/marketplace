@@ -93,8 +93,8 @@ module.exports = {
         return sendRes(res, false, "all good", post)
     },
     replacePost: async (req, res) => {
+        
         const _id = req.body._id
-
 
         const newPost = await postSchema.findOneAndUpdate(
             { _id },
@@ -103,8 +103,7 @@ module.exports = {
 
         )
 
-
-        return sendRes(res, false, "skelbimas pakeistas", {'req.body': newPost })
+        return sendRes(res, false, "skelbimas pakeistas", newPost)
 
     },
     removePost: async (req, res) => {

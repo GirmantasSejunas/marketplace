@@ -8,6 +8,10 @@
   padding: 5px;
 }
 
+.w20{
+  width: 20%;
+}
+
 .w25 {
   width: 25%;
 }
@@ -346,4 +350,7 @@
   flex-direction: column;
   align-items: flex-end;
 
+}  
+.userProfileInfo button:hover{
+  padding: 10px;
 }

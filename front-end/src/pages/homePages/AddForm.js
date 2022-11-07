@@ -30,7 +30,7 @@ const AddForm = () => {
 
 
         post('addPost', form).then(res =>{
-            alert(res.error._id)
+            // alert(res.error._id)
             alert(res.data._id)
             if(!res.error) return nav('/')
         })
