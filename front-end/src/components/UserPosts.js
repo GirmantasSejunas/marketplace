@@ -15,7 +15,6 @@ useEffect(() => {
     
 
     get(`userposts/${secret}`).then(res => {
-        console.log(res.data)
         setPosts(res.data)
 
 
@@ -25,9 +24,7 @@ useEffect(() => {
 
   return (
     <div>
-        {posts && posts.map((e, i) => <SingleCard post={e} key={i} />)}
-
-        lalalala
+        {posts && posts.map((e, i) => <SingleCard post={e} key={i} />).reverse()}
         
     </div>
   )

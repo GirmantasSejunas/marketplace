@@ -14,17 +14,16 @@ const Login = () => {
       email:emailRef.current.value,
       password:passwordRef.current.value
     }
-    console.log(user)
 
     emailRef.current.value = ''  
     passwordRef.current.value = ''
     
     const userData = await post('login', user)
 
+    window.alert(userData.message)
     
     if(!userData.error){
 
-      console.log(userData.message)
 
       localStorage.setItem('secret', userData.data.secret)
       return  nav('/userProfile')

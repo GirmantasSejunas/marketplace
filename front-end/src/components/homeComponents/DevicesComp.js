@@ -12,7 +12,6 @@ const DevicesComp = () => {
     const option = {option:'Prietaisai'}
     
     post('devices', option).then(res => {
-        console.log(res.data)
         setPosts(res.data)
     })
 

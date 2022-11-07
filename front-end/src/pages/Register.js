@@ -19,7 +19,7 @@ const Register = () => {
 
     const registerData = await post("register", user)
 
-
+    window.alert(registerData.message)
     if (!registerData.error) {
 
       nav('/login')

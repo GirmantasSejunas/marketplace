@@ -19,6 +19,7 @@ import Clothes from './pages/homePages/Clothes';
 import RealEstate from './pages/homePages/RealEstate';
 import AddForm from './pages/homePages/AddForm';
 import ProfilePage from './pages/ProfilePage';
+import EditPost from './pages/EditPost';
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
             <Route path='/realEstate' element={<RealEstate />} />
             <Route path='/addform' element={<AddForm />} />
             <Route path='/userProfile' element={<ProfilePage />} />
+            <Route path='/editpost' element={<EditPost />} />
           </Routes>
           <Footer />
         </BrowserRouter>

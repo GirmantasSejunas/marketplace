@@ -1,7 +1,6 @@
 import React from 'react'
 
 const SingleCard = (post) => {
-    console.log(post)
     return (
         <div className='singleCard'>
 
@@ -14,7 +13,7 @@ const SingleCard = (post) => {
                 <div className='singleCardSpans'>
                     <span>{post.post.city}</span>
                     <span>Tel.nr: {post.post.phone}</span>
-                    <span>kaina: {post.post.price} e</span>
+                    <span>Kaina: {post.post.price} e</span>
                 </div>
             </div>
         </div>

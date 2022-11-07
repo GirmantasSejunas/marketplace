@@ -18,8 +18,6 @@ const UserProfile = () => {
       if (!data.error) {
         setUser(data.data)
       }
-
-      console.log(data)
     })
   }
 
@@ -37,7 +35,7 @@ const UserProfile = () => {
   return (
 
     <div>
-      {user &&
+      {user  &&
         <div className='userProfile'>
 
           <div className='userProfileInfo'>

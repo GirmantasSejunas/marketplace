@@ -28,7 +28,7 @@ module.exports = {
 
         const user = await userSchema.findOne({ secret }, { mail: 1, })
 
-        if (!user) return sendRes(res, true, "user not found", null)
+        if (!user) return sendRes(res, true, "Vartotojas nerastas", null)
 
         req.body.user = user
         next()

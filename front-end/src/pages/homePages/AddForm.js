@@ -28,14 +28,10 @@ const AddForm = () => {
             secret: localStorage.getItem('secret')
         }
 
-        // photoRef.current.value = ''
-        // titleRef.current.value = ''
-        // descriptionRef.current.value = ''
-        // cityRef.current.value = ''
-        // priceRef.current.value = ''
-        // phoneRef.current.value = ''
 
         post('addPost', form).then(res =>{
+            alert(res.error._id)
+            alert(res.data._id)
             if(!res.error) return nav('/')
         })
 
@@ -46,12 +42,12 @@ const AddForm = () => {
         <div className='formLayout'>
             <h2>Ideti skelbima</h2>
             <input ref={photoRef} className='p_5' type={'text'} placeholder="Nuotrauka" />
-            <input ref={titleRef} className='p_5' type={'text'} placeholder="Pavadinimas" />
-            <textarea ref={descriptionRef} className='p_5' type={'text'} placeholder="Aprasymas" />
-            <input ref={cityRef} className='p_5' type={'text'} placeholder="Miestas" />
-            <input ref={priceRef} className='p_5' type={'text'} placeholder="Kaina" />
-            <input ref={phoneRef} className='p_5' type={'text'} placeholder="Tel.nr" />
-            <select ref={optionRef} className='p_5'>
+            <input ref={titleRef}  className='p_5' type={'text'} placeholder="Pavadinimas" />
+            <textarea ref={descriptionRef}  className='p_5' type={'text'} placeholder="Aprasymas" />
+            <input ref={cityRef}  className='p_5' type={'text'} placeholder="Miestas" />
+            <input ref={priceRef}  className='p_5' type={'text'} placeholder="Kaina" />
+            <input ref={phoneRef}  className='p_5' type={'text'} placeholder="Tel.nr" />
+            <select ref={optionRef}  className='p_5'>
                 <option>Nekilnojamas turtas</option>
                 <option>Transportas</option>
                 <option>Prietaisai</option>
