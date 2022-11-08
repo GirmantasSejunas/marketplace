@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainContext from './context/MainContext';
 import { useState } from 'react';
 import './App.css';
+
+
 import Header from './components/Header'
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -18,6 +20,7 @@ import Transport from './pages/homePages/Transport'
 import Clothes from './pages/homePages/Clothes';
 import RealEstate from './pages/homePages/RealEstate';
 import AddForm from './pages/homePages/AddForm';
+import WantedPosts from './pages/homePages/WantedPosts';
 import ProfilePage from './pages/ProfilePage';
 import EditPost from './pages/EditPost';
 
@@ -25,12 +28,15 @@ function App() {
 
   const [posts, setPosts] = useState([])
   const [user, setUser] = useState(null)
+  const [wantedPosts, setWantedPosts] = useState([])
 
   const states = {
       posts,
       setPosts,
       user,
-      setUser
+      setUser,
+      wantedPosts,
+      setWantedPosts
   }
 
   return (
@@ -56,6 +62,7 @@ function App() {
             <Route path='/addform' element={<AddForm />} />
             <Route path='/userProfile' element={<ProfilePage />} />
             <Route path='/editpost' element={<EditPost />} />
+            <Route path='/wantedPosts' element={<WantedPosts />} />
           </Routes>
           <Footer />
         </BrowserRouter>
