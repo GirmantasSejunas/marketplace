@@ -1,6 +1,29 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { get } from '../plugins/plugin'
 
 const Header = () => {
+
+const searchRef = useRef()
+
+const [post, setPost] = useState([])
+
+  function searchPost(){
+
+    const searchInput = searchRef.current.value
+
+    if(searchInput){
+      get('searchpost/' + searchInput).then(data => {
+        if (!data.error) {
+          setPost(data.data)
+        }
+      })
+    }
+    }
+
+  console.log(post)
+  
+
+
 
 
   return (
@@ -19,8 +42,8 @@ const Header = () => {
 
         </div>
         <div className='header_botton'>
-          <input className='p_5' type={'text'} placeholder='Iveskite paieskos fraze' />
-          <button className='p_5 button_green w25'>Ieskoti</button>
+          <input ref={searchRef} className='p_5' type={'text'} placeholder='Iveskite paieskos fraze' />
+          <button onClick={searchPost} className='p_5 button_green w25'>Ieskoti</button>
         </div>
       </div>
       <a className='p_5 header_img'  href='/userProfile'> 

@@ -113,6 +113,26 @@ module.exports = {
 
 
         return sendRes(res, false, "skelbimas pasalintas", deletedPost)
+    }, 
+    searchpost: async (req, res) => {
+
+        const searchPhrase = req.params.id
+        const allPost = await postSchema.aggregate( [
+            {
+              '$search': {
+                'index': 'textSearch',
+                'text': {
+                  'query': `${searchPhrase}`,
+                  'path': {
+                    'wildcard': '*'
+                  }
+                }
+              }
+            }
+          ])
+
+        return sendRes(res, false, "good", allPost)
+        
     }
 
 }

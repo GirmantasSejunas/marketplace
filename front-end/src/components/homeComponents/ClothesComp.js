@@ -13,7 +13,6 @@ const ClothesComp = () => {
     const option = {option:'Apranga'}
     
     post('clothes', option).then(res => {
-        console.log(res.data)
         setPosts(res.data)
     })
 

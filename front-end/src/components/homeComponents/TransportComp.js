@@ -12,7 +12,6 @@ const TransportComp = () => {
     const option = {option:'Transportas'}
     
     post('transport', option).then(res => {
-        console.log(res.data)
         setPosts(res.data)
     })
 

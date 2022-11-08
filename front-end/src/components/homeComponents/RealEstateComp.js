@@ -12,8 +12,7 @@ const RealEstateComp = () => {
     const option = {option:'Nekilnojamas turtas'}
     
     post('realEstate', option).then(res => {
-        console.log(res.data)
-        setPosts(res.data)
+       setPosts(res.data)
     })
 
 
