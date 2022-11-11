@@ -3,9 +3,9 @@ const app = express()
 const cors = require("cors")
 const mongoose = require("mongoose")
 const mainRouter = require("./routes/router")
-// const bcrypt = require("bcrypt")
+require('dotenv').config()
 
-mongoose.connect("mongodb+srv://admin:admin@cluster0.thk22x2.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect(`mongodb+srv://${process.env.mongo_login}`)
     .then(() => {
         console.log('CONNECTED OK')
     }).catch(e => {
